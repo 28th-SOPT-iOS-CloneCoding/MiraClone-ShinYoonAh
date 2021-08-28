@@ -12,6 +12,9 @@
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
 		EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD709E26DA626D00F5AB6B /* MainVC.swift */; };
 		EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */; };
+		EDDD70BB26DA75E000F5AB6B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */; };
+		EDDD70BC26DA75E000F5AB6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B926DA75E000F5AB6B /* RxRelay.framework */; };
+		EDDD70BD26DA75E000F5AB6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		EDDD708E26DA5A4400F5AB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDDD709E26DA626D00F5AB6B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		EDDD70B926DA75E000F5AB6B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDD70BB26DA75E000F5AB6B /* RxCocoa.framework in Frameworks */,
+				EDDD70BC26DA75E000F5AB6B /* RxRelay.framework in Frameworks */,
+				EDDD70BD26DA75E000F5AB6B /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				EDDD707F26DA5A4300F5AB6B /* KakaoQR */,
 				EDDD707E26DA5A4300F5AB6B /* Products */,
+				EDDD70B726DA75E000F5AB6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +154,16 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		EDDD70B726DA75E000F5AB6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */,
+				EDDD70B926DA75E000F5AB6B /* RxRelay.framework */,
+				EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +174,7 @@
 				EDDD707926DA5A4300F5AB6B /* Sources */,
 				EDDD707A26DA5A4300F5AB6B /* Frameworks */,
 				EDDD707B26DA5A4300F5AB6B /* Resources */,
+				EDDD70BE26DA75E400F5AB6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,6 +228,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EDDD70BE26DA75E400F5AB6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDDD707926DA5A4300F5AB6B /* Sources */ = {
@@ -355,6 +399,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/RxSwift.xcframework/ios-arm64_armv7",
+					"$(PROJECT_DIR)/Carthage/Build/RxRelay.xcframework/ios-arm64_armv7",
+				);
 				INFOPLIST_FILE = KakaoQR/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,6 +423,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/RxSwift.xcframework/ios-arm64_armv7",
+					"$(PROJECT_DIR)/Carthage/Build/RxRelay.xcframework/ios-arm64_armv7",
+				);
 				INFOPLIST_FILE = KakaoQR/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
