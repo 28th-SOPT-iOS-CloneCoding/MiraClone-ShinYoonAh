@@ -12,9 +12,10 @@
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
 		EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD709E26DA626D00F5AB6B /* MainVC.swift */; };
 		EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */; };
-		EDDD70BB26DA75E000F5AB6B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */; };
-		EDDD70BC26DA75E000F5AB6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B926DA75E000F5AB6B /* RxRelay.framework */; };
-		EDDD70BD26DA75E000F5AB6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */; };
+		EDDD70CB26DA859D00F5AB6B /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70BF26DA7BA000F5AB6B /* ReactorKit.framework */; };
+		EDDD70CD26DA859D00F5AB6B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */; };
+		EDDD70CF26DA859D00F5AB6B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70B926DA75E000F5AB6B /* RxRelay.framework */; };
+		EDDD70D126DA859D00F5AB6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		EDDD70B926DA75E000F5AB6B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		EDDD70BF26DA7BA000F5AB6B /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKit.framework; path = Carthage/Build/iOS/ReactorKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,9 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDD70BB26DA75E000F5AB6B /* RxCocoa.framework in Frameworks */,
-				EDDD70BC26DA75E000F5AB6B /* RxRelay.framework in Frameworks */,
-				EDDD70BD26DA75E000F5AB6B /* RxSwift.framework in Frameworks */,
+				EDDD70D126DA859D00F5AB6B /* RxSwift.framework in Frameworks */,
+				EDDD70CD26DA859D00F5AB6B /* RxCocoa.framework in Frameworks */,
+				EDDD70CB26DA859D00F5AB6B /* ReactorKit.framework in Frameworks */,
+				EDDD70CF26DA859D00F5AB6B /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +160,7 @@
 		EDDD70B726DA75E000F5AB6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDDD70BF26DA7BA000F5AB6B /* ReactorKit.framework */,
 				EDDD70B826DA75E000F5AB6B /* RxCocoa.framework */,
 				EDDD70B926DA75E000F5AB6B /* RxRelay.framework */,
 				EDDD70BA26DA75E000F5AB6B /* RxSwift.framework */,
@@ -241,6 +245,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactorKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -248,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -280,6 +285,7 @@
 		EDDD708F26DA5A4400F5AB6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -341,6 +347,7 @@
 		EDDD709026DA5A4400F5AB6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -399,6 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DYLIB_INSTALL_NAME_BASE = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -414,6 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -423,6 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DYLIB_INSTALL_NAME_BASE = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -438,6 +448,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
