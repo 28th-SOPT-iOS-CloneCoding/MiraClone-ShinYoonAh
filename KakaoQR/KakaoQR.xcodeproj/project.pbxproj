@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */; };
-		EDDD708326DA5A4300F5AB6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708226DA5A4300F5AB6B /* SceneDelegate.swift */; };
-		EDDD708526DA5A4300F5AB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708426DA5A4300F5AB6B /* ViewController.swift */; };
-		EDDD708826DA5A4300F5AB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708626DA5A4300F5AB6B /* Main.storyboard */; };
 		EDDD708A26DA5A4400F5AB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708926DA5A4400F5AB6B /* Assets.xcassets */; };
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
+		EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD709E26DA626D00F5AB6B /* MainVC.swift */; };
+		EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDDD707D26DA5A4300F5AB6B /* KakaoQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDDD708226DA5A4300F5AB6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDDD708426DA5A4300F5AB6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDDD708726DA5A4300F5AB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDDD708926DA5A4400F5AB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDDD708C26DA5A4400F5AB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDDD708E26DA5A4400F5AB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDD709E26DA626D00F5AB6B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,94 @@
 		EDDD707F26DA5A4300F5AB6B /* KakaoQR */ = {
 			isa = PBXGroup;
 			children = (
-				EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */,
-				EDDD708226DA5A4300F5AB6B /* SceneDelegate.swift */,
-				EDDD708426DA5A4300F5AB6B /* ViewController.swift */,
-				EDDD708626DA5A4300F5AB6B /* Main.storyboard */,
-				EDDD708926DA5A4400F5AB6B /* Assets.xcassets */,
-				EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */,
-				EDDD708E26DA5A4400F5AB6B /* Info.plist */,
+				EDDD709626DA60F700F5AB6B /* Global */,
+				EDDD709426DA60A800F5AB6B /* Source */,
+				EDDD709526DA60F000F5AB6B /* Resource */,
 			);
 			path = KakaoQR;
+			sourceTree = "<group>";
+		};
+		EDDD709426DA60A800F5AB6B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD709A26DA616100F5AB6B /* Controllers */,
+				EDDD709926DA615A00F5AB6B /* Models */,
+				EDDD709826DA611300F5AB6B /* ViewModels */,
+				EDDD709726DA610E00F5AB6B /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EDDD709526DA60F000F5AB6B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */,
+				EDDD708926DA5A4400F5AB6B /* Assets.xcassets */,
+				EDDD708E26DA5A4400F5AB6B /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EDDD709626DA60F700F5AB6B /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD709D26DA61B600F5AB6B /* Support */,
+				EDDD709C26DA618500F5AB6B /* Extensions */,
+				EDDD709B26DA618100F5AB6B /* Constants */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		EDDD709726DA610E00F5AB6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDDD709826DA611300F5AB6B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EDDD709926DA615A00F5AB6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDDD709A26DA616100F5AB6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD709E26DA626D00F5AB6B /* MainVC.swift */,
+				EDDD70A026DA628700F5AB6B /* QRCodeVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EDDD709B26DA618100F5AB6B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EDDD709C26DA618500F5AB6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDDD709D26DA61B600F5AB6B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +203,6 @@
 			files = (
 				EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */,
 				EDDD708A26DA5A4400F5AB6B /* Assets.xcassets in Resources */,
-				EDDD708826DA5A4300F5AB6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +213,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDD708526DA5A4300F5AB6B /* ViewController.swift in Sources */,
 				EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */,
-				EDDD708326DA5A4300F5AB6B /* SceneDelegate.swift in Sources */,
+				EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */,
+				EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EDDD708626DA5A4300F5AB6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDDD708726DA5A4300F5AB6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KakaoQR/Info.plist;
+				INFOPLIST_FILE = KakaoQR/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KakaoQR/Info.plist;
+				INFOPLIST_FILE = KakaoQR/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
