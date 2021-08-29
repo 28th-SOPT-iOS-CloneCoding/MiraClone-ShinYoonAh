@@ -51,8 +51,8 @@ class QRView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    var qrView: UIView = {
-        let view = UIView(frame: CGRect.zero)
+    var qrView: QRContainView = {
+        let view = QRContainView()
         view.backgroundColor = .white
         view.layer.shadowColor = UIColor.gray.cgColor
         view.layer.shadowOpacity = 0.5
