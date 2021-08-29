@@ -28,10 +28,14 @@ class MainReactor: Reactor {
         switch action {
         case .shake(let vc):
             let subject = PublishSubject<Void>()
-            let target = QRCodeVC()
             
-            vc.present(target, animated: true) {
-                subject.onCompleted()
+            if shakeState.isShake() {
+                let target = QRCodeVC()
+                
+                target.modalPresentationStyle = .fullScreen
+                vc.present(target, animated: true) {
+                    subject.onCompleted()
+                }
             }
             
             return Observable.just(Mutation.presentQR)
