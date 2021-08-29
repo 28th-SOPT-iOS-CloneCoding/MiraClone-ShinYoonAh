@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ReactorKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = QRCodeVC()
-        window.backgroundColor = .white
-        window.makeKeyAndVisible()
+        var vc = MainVC()
+        vc.view.backgroundColor = .white
+        window.rootViewController = vc
+        vc.bind(reactor: MainReactor())
         self.window = window
+        window.makeKeyAndVisible()
         return true
     }
 }

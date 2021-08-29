@@ -14,6 +14,9 @@
 		EDCA9C4A26DB4CA200E3ADE0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4926DB4CA200E3ADE0 /* View.swift */; };
 		EDCA9C4D26DB5D4A00E3ADE0 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4C26DB5D4A00E3ADE0 /* UILabel+Extension.swift */; };
 		EDCA9C4F26DB5FC400E3ADE0 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4E26DB5FC400E3ADE0 /* UIButton+Extension.swift */; };
+		EDCA9C5126DB619400E3ADE0 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C5026DB619400E3ADE0 /* MainReactor.swift */; };
+		EDCA9C5326DB766400E3ADE0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C5226DB766400E3ADE0 /* UserData.swift */; };
+		EDCA9C5626DB76C500E3ADE0 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C5526DB76C500E3ADE0 /* Shake.swift */; };
 		EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */; };
 		EDDD708A26DA5A4400F5AB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708926DA5A4400F5AB6B /* Assets.xcassets */; };
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
@@ -34,6 +37,9 @@
 		EDCA9C4926DB4CA200E3ADE0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EDCA9C4C26DB5D4A00E3ADE0 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		EDCA9C4E26DB5FC400E3ADE0 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		EDCA9C5026DB619400E3ADE0 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
+		EDCA9C5226DB766400E3ADE0 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		EDCA9C5526DB76C500E3ADE0 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		EDDD707D26DA5A4300F5AB6B /* KakaoQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDD708926DA5A4400F5AB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +71,15 @@
 				EDCA9C4926DB4CA200E3ADE0 /* View.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EDCA9C5426DB76AF00E3ADE0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA9C5226DB766400E3ADE0 /* UserData.swift */,
+				EDCA9C5526DB76C500E3ADE0 /* Shake.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		EDDD707426DA5A4300F5AB6B = {
@@ -117,6 +132,7 @@
 		EDDD709626DA60F700F5AB6B /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				EDCA9C5426DB76AF00E3ADE0 /* Classes */,
 				EDDD709D26DA61B600F5AB6B /* Support */,
 				EDDD709C26DA618500F5AB6B /* Extensions */,
 				EDDD709B26DA618100F5AB6B /* Constants */,
@@ -136,6 +152,7 @@
 		EDDD709826DA611300F5AB6B /* Reactors */ = {
 			isa = PBXGroup;
 			children = (
+				EDCA9C5026DB619400E3ADE0 /* MainReactor.swift */,
 				EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */,
 			);
 			path = Reactors;
@@ -266,9 +283,12 @@
 				EDCA9C4A26DB4CA200E3ADE0 /* View.swift in Sources */,
 				EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */,
 				EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */,
+				EDCA9C5626DB76C500E3ADE0 /* Shake.swift in Sources */,
 				EDCA9C4F26DB5FC400E3ADE0 /* UIButton+Extension.swift in Sources */,
 				EDCA9C4726DB414100E3ADE0 /* QRCodeReactor.swift in Sources */,
 				EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */,
+				EDCA9C5326DB766400E3ADE0 /* UserData.swift in Sources */,
+				EDCA9C5126DB619400E3ADE0 /* MainReactor.swift in Sources */,
 				EDCA9C4026DB394B00E3ADE0 /* UIView+Extension.swift in Sources */,
 				EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */,
 				EDCA9C4326DB3A7800E3ADE0 /* Const.swift in Sources */,
