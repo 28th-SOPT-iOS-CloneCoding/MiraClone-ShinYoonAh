@@ -10,6 +10,7 @@
 		EDCA9C4026DB394B00E3ADE0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */; };
 		EDCA9C4326DB3A7800E3ADE0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4226DB3A7800E3ADE0 /* Const.swift */; };
 		EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4426DB3B4100E3ADE0 /* QRView.swift */; };
+		EDCA9C4726DB414100E3ADE0 /* QRCodeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */; };
 		EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */; };
 		EDDD708A26DA5A4400F5AB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708926DA5A4400F5AB6B /* Assets.xcassets */; };
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EDCA9C4226DB3A7800E3ADE0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		EDCA9C4426DB3B4100E3ADE0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReactor.swift; sourceTree = "<group>"; };
 		EDDD707D26DA5A4300F5AB6B /* KakaoQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDD708926DA5A4400F5AB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		EDDD709826DA611300F5AB6B /* Reactors */ = {
 			isa = PBXGroup;
 			children = (
+				EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */,
 			);
 			path = Reactors;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */,
 				EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */,
+				EDCA9C4726DB414100E3ADE0 /* QRCodeReactor.swift in Sources */,
 				EDDD709F26DA626D00F5AB6B /* MainVC.swift in Sources */,
 				EDCA9C4026DB394B00E3ADE0 /* UIView+Extension.swift in Sources */,
 				EDDD70A126DA628700F5AB6B /* QRCodeVC.swift in Sources */,

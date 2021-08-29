@@ -12,4 +12,8 @@ struct Const {
         static let main = "MainVC"
         static let qr = "QRCodeVC"
     }
+    
+    struct Reactor {
+        static let qr = "QRCodeReactor"
+    }
 }
