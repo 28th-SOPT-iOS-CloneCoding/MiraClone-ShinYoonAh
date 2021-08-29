@@ -11,6 +11,7 @@
 		EDCA9C4326DB3A7800E3ADE0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4226DB3A7800E3ADE0 /* Const.swift */; };
 		EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4426DB3B4100E3ADE0 /* QRView.swift */; };
 		EDCA9C4726DB414100E3ADE0 /* QRCodeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */; };
+		EDCA9C4A26DB4CA200E3ADE0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4926DB4CA200E3ADE0 /* View.swift */; };
 		EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */; };
 		EDDD708A26DA5A4400F5AB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708926DA5A4400F5AB6B /* Assets.xcassets */; };
 		EDDD708D26DA5A4400F5AB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD708B26DA5A4400F5AB6B /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 		EDCA9C4226DB3A7800E3ADE0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		EDCA9C4426DB3B4100E3ADE0 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		EDCA9C4626DB414100E3ADE0 /* QRCodeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReactor.swift; sourceTree = "<group>"; };
+		EDCA9C4926DB4CA200E3ADE0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EDDD707D26DA5A4300F5AB6B /* KakaoQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDD708026DA5A4300F5AB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDD708926DA5A4400F5AB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDCA9C4826DB4C9300E3ADE0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA9C4926DB4CA200E3ADE0 /* View.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		EDDD707426DA5A4300F5AB6B = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 				EDDD709D26DA61B600F5AB6B /* Support */,
 				EDDD709C26DA618500F5AB6B /* Extensions */,
 				EDDD709B26DA618100F5AB6B /* Constants */,
+				EDCA9C4826DB4C9300E3ADE0 /* Base */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCA9C4A26DB4CA200E3ADE0 /* View.swift in Sources */,
 				EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */,
 				EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */,
 				EDCA9C4726DB414100E3ADE0 /* QRCodeReactor.swift in Sources */,
