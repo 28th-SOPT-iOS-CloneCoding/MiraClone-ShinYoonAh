@@ -12,7 +12,7 @@ class QRView: UIView {
     let qrTitle: UILabel = {
         let label = UILabel()
         label.text = "입장을 위한 QR x MIRACLE"
-        label.addColorIn(text: "MIRACLE")
+        label.addBlueColorIn(text: "MIRACLE")
         label.font = .boldSystemFont(ofSize: 15)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
