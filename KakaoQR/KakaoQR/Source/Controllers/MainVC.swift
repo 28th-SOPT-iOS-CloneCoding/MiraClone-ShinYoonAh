@@ -25,17 +25,31 @@ class MainVC: UIViewController, View {
     }()
     var stateLabel: UILabel = {
         let label = UILabel()
-        label.text = "state: \(Shake.shared.isShake())"
+        label.text = Shake.shared.isShake() ? "🌈 shake me 🌈" : "✈️ can't shake ✈️"
         label.font = .systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private let shakeState = Shake.shared
+    private var motion = UIEvent.EventSubtype.motionShake
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake && Shake.shared.isShake() {
+            print("yess")
+            let vc = QRCodeVC()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     fileprivate func setupLayout() {
@@ -58,7 +72,7 @@ class MainVC: UIViewController, View {
         
         // State 바인딩
         reactor.state
-            .map { "state: \($0.canShake)" }
+            .map { $0.canShake ? "🌈 shake me 🌈" : "✈️ can't shake ✈️" }
             .bind(to: stateLabel.rx.text)
             .disposed(by: bag)
     }
