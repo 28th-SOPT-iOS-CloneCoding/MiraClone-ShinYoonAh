@@ -43,6 +43,7 @@ struct SimpleEntry: TimelineEntry {
 
 struct QRWidgetEntryView : View {
     var entry: Provider.Entry
+    private static let deeplinkURL: URL = URL(string: "widget://qrcode")!
 
     var body: some View {
         ZStack {
@@ -51,6 +52,7 @@ struct QRWidgetEntryView : View {
                 .resizable()
                 .frame(width: 145, height: 130, alignment: .center)
         }
+        .widgetURL(QRWidgetEntryView.deeplinkURL)
     }
 }
 

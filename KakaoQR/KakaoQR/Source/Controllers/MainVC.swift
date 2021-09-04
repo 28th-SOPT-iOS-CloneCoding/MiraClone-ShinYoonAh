@@ -13,6 +13,7 @@ class MainVC: UIViewController, View {
     // MARK: - Properties
     var bag: DisposeBag = DisposeBag()
     var reactor: MainReactor!
+    var useWidget = false
     
     var qrButton: UIButton = {
         let button = UIButton()
@@ -36,6 +37,7 @@ class MainVC: UIViewController, View {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        shakeState.setShake(state: true)
         setupLayout()
     }
     
@@ -64,6 +66,15 @@ class MainVC: UIViewController, View {
     }
     
     func bindReactor() {
+        if useWidget {
+            Observable.just("")
+                .map { _ in
+                    Reactor.Action.shake(vc: self)
+                }
+                .bind(to: reactor.action)
+                .disposed(by: bag)
+        }
+        
         // Action 바인딩
         qrButton.rx.tap
             .map { Reactor.Action.shake(vc: self) }
