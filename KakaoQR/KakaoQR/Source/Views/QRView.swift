@@ -33,7 +33,7 @@ class QRView: UIView {
     var xmarkButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "xmark"), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .gray
         button.constraint(button.widthAnchor, constant: 30)
         button.constraint(button.heightAnchor, constant: 30)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -101,6 +101,6 @@ class QRView: UIView {
     }
     
     fileprivate func configUI() {
-        backgroundColor = .white
+        backgroundColor = .systemBackground
     }
 }

@@ -34,7 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         
             if path == qrcodeLinkPath {
-                let nextVC = QRCodeVC()
+                var nextVC = QRCodeVC()
+                nextVC.bind(reactor: QRCodeReactor(root: nextVC))
                 nextVC.modalPresentationStyle = .overFullScreen
                 if var rootVC = window?.rootViewController as? MainVC {
                     rootVC.useWidget = true

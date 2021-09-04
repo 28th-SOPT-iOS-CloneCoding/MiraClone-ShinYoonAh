@@ -42,6 +42,9 @@ class QRCodeVC: UIViewController, View {
     }
     
     func bindReactor() {
-        
+        qrView.xmarkButton.rx.tap
+            .map { Reactor.Action.close }
+            .bind(to: reactor.action)
+            .disposed(by: bag)
     }
 }

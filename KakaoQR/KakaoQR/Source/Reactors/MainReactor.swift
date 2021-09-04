@@ -30,8 +30,9 @@ class MainReactor: Reactor {
             let subject = PublishSubject<Void>()
             
             if shakeState.isShake() {
-                let target = QRCodeVC()
+                var target = QRCodeVC()
                 
+                target.bind(reactor: QRCodeReactor(root: target))
                 target.modalPresentationStyle = .fullScreen
                 vc.present(target, animated: true) {
                     subject.onCompleted()
