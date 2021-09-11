@@ -15,6 +15,7 @@ class MainVC: UIViewController, View {
     var bag: DisposeBag = DisposeBag()
     var reactor: MainReactor!
     var useWidget = false
+    var auth = false
     
     var qrButton: UIButton = {
         let button = UIButton()
@@ -39,7 +40,6 @@ class MainVC: UIViewController, View {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        takeAuthContext()
         shakeState.setShake(state: true)
         setupLayout()
     }
@@ -70,7 +70,7 @@ class MainVC: UIViewController, View {
     
     func takeAuthContext() {
         if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "QRCode 인증을 위해 생체인증을 해주세요.") { (success, error) in
+            authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "남남남대문을 열어라") {(success, error) in
                 if !success {
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
                         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
@@ -78,21 +78,21 @@ class MainVC: UIViewController, View {
                           exit(0)
                          }
                     }
+                } else {
+                    if self.useWidget {
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            Observable.just("")
+                                .map { _ in Reactor.Action.shake(vc: self) }
+                                .bind(to: self.reactor.action)
+                                .disposed(by: self.bag)
+                        }
+                    }
                 }
             }
         }
     }
     
     func bindReactor() {
-        if useWidget {
-            Observable.just("")
-                .map { _ in
-                    Reactor.Action.shake(vc: self)
-                }
-                .bind(to: reactor.action)
-                .disposed(by: bag)
-        }
-        
         // Action 바인딩
         qrButton.rx.tap
             .map { Reactor.Action.shake(vc: self) }

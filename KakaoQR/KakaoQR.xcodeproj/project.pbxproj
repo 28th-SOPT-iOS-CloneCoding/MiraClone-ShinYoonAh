@@ -15,6 +15,8 @@
 		ED2ACAC326E3AD9400C5A772 /* QRWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = ED2ACABE26E3AD9400C5A772 /* QRWidget.intentdefinition */; };
 		ED2ACAC626E3AD9400C5A772 /* QRWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED2ACAB526E3AD9400C5A772 /* QRWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ED5F1A1426ECCE56003FF801 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5F1A1326ECCE56003FF801 /* LocalAuthentication.framework */; };
+		ED5F1A1626ECE1BF003FF801 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F1A1526ECE1BF003FF801 /* UIWindow+Extension.swift */; };
+		ED5F1A1826ECE451003FF801 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F1A1726ECE451003FF801 /* UIApplication+Extension.swift */; };
 		ED78842426DB8EFB006D8787 /* QRContainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78842326DB8EFB006D8787 /* QRContainView.swift */; };
 		EDCA9C4026DB394B00E3ADE0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */; };
 		EDCA9C4326DB3A7800E3ADE0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4226DB3A7800E3ADE0 /* Const.swift */; };
@@ -71,6 +73,8 @@
 		ED2ACABF26E3AD9400C5A772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2ACAC126E3AD9400C5A772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED5F1A1326ECCE56003FF801 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		ED5F1A1526ECE1BF003FF801 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		ED5F1A1726ECE451003FF801 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		ED78842326DB8EFB006D8787 /* QRContainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRContainView.swift; sourceTree = "<group>"; };
 		EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EDCA9C4226DB3A7800E3ADE0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */,
 				EDCA9C4C26DB5D4A00E3ADE0 /* UILabel+Extension.swift */,
 				EDCA9C4E26DB5FC400E3ADE0 /* UIButton+Extension.swift */,
+				ED5F1A1526ECE1BF003FF801 /* UIWindow+Extension.swift */,
+				ED5F1A1726ECE451003FF801 /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +404,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCA9C4A26DB4CA200E3ADE0 /* View.swift in Sources */,
+				ED5F1A1626ECE1BF003FF801 /* UIWindow+Extension.swift in Sources */,
+				ED5F1A1826ECE451003FF801 /* UIApplication+Extension.swift in Sources */,
 				EDDD708126DA5A4300F5AB6B /* AppDelegate.swift in Sources */,
 				ED78842426DB8EFB006D8787 /* QRContainView.swift in Sources */,
 				EDCA9C4526DB3B4100E3ADE0 /* QRView.swift in Sources */,
