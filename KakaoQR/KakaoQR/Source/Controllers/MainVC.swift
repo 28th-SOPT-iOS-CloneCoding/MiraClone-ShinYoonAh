@@ -69,13 +69,15 @@ class MainVC: UIViewController, View {
     }
     
     func takeAuthContext() {
-        authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "QRCode 인증을 위해 생체인증을 해주세요.") { (success, error) in
-            if !success {
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
-                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                      exit(0)
-                     }
+        if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "QRCode 인증을 위해 생체인증을 해주세요.") { (success, error) in
+                if !success {
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                          exit(0)
+                         }
+                    }
                 }
             }
         }
