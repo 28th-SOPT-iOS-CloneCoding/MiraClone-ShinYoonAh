@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 import ReactorKit
 import RxCocoa
 
@@ -33,10 +34,12 @@ class MainVC: UIViewController, View {
     }()
     private let shakeState = Shake.shared
     private var motion = UIEvent.EventSubtype.motionShake
+    private let authContext = LAContext()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        takeAuthContext()
         shakeState.setShake(state: true)
         setupLayout()
     }
@@ -63,6 +66,19 @@ class MainVC: UIViewController, View {
             stateLabel.topAnchor.constraint(equalTo: qrButton.bottomAnchor, constant: 20),
             stateLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    func takeAuthContext() {
+        authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "QRCode 인증을 위해 생체인증을 해주세요.") { (success, error) in
+            if !success {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                      exit(0)
+                     }
+                }
+            }
+        }
     }
     
     func bindReactor() {

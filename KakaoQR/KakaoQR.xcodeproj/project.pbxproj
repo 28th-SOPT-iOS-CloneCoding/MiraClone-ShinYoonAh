@@ -14,6 +14,7 @@
 		ED2ACAC226E3AD9400C5A772 /* QRWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = ED2ACABE26E3AD9400C5A772 /* QRWidget.intentdefinition */; };
 		ED2ACAC326E3AD9400C5A772 /* QRWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = ED2ACABE26E3AD9400C5A772 /* QRWidget.intentdefinition */; };
 		ED2ACAC626E3AD9400C5A772 /* QRWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED2ACAB526E3AD9400C5A772 /* QRWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED5F1A1426ECCE56003FF801 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5F1A1326ECCE56003FF801 /* LocalAuthentication.framework */; };
 		ED78842426DB8EFB006D8787 /* QRContainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED78842326DB8EFB006D8787 /* QRContainView.swift */; };
 		EDCA9C4026DB394B00E3ADE0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */; };
 		EDCA9C4326DB3A7800E3ADE0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA9C4226DB3A7800E3ADE0 /* Const.swift */; };
@@ -69,6 +70,7 @@
 		ED2ACABE26E3AD9400C5A772 /* QRWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QRWidget.intentdefinition; sourceTree = "<group>"; };
 		ED2ACABF26E3AD9400C5A772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2ACAC126E3AD9400C5A772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5F1A1326ECCE56003FF801 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		ED78842326DB8EFB006D8787 /* QRContainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRContainView.swift; sourceTree = "<group>"; };
 		EDCA9C3F26DB394B00E3ADE0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EDCA9C4226DB3A7800E3ADE0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5F1A1426ECCE56003FF801 /* LocalAuthentication.framework in Frameworks */,
 				EDDD70DC26DA894900F5AB6B /* RxRelay in Frameworks */,
 				EDDD70DE26DA894A00F5AB6B /* RxCocoa in Frameworks */,
 				EDDD70D826DA894900F5AB6B /* RxSwift in Frameworks */,
@@ -117,6 +120,7 @@
 		ED2ACAB626E3AD9400C5A772 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED5F1A1326ECCE56003FF801 /* LocalAuthentication.framework */,
 				ED2ACAB726E3AD9400C5A772 /* WidgetKit.framework */,
 				ED2ACAB926E3AD9400C5A772 /* SwiftUI.framework */,
 			);
