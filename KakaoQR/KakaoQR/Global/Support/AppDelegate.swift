@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var vc = MainVC()
         vc.view.backgroundColor = .systemBackground
         window.rootViewController = vc
+        vc.useWidget = false
         vc.bind(reactor: MainReactor())
         self.window = window
         window.makeKeyAndVisible()
@@ -27,25 +28,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            let qrcodeLinkPath = ""
-
-            guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true), let path = components.path else {
-                return false
-            }
+        let qrcodeLinkPath = ""
         
-            if path == qrcodeLinkPath {
-                var nextVC = QRCodeVC()
-                nextVC.bind(reactor: QRCodeReactor(root: nextVC))
-                nextVC.modalPresentationStyle = .overFullScreen
-                if var rootVC = window?.rootViewController as? MainVC {
-                    rootVC.useWidget = true
-                    rootVC.bind(reactor: MainReactor())
-                }
-
-                return true
-            } else {
-                return false
-            }
+        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true), let path = components.path else {
+            return false
         }
+        
+        if path == qrcodeLinkPath {
+            var nextVC = QRCodeVC()
+            nextVC.bind(reactor: QRCodeReactor(root: nextVC))
+            nextVC.modalPresentationStyle = .overFullScreen
+            if var rootVC = window?.rootViewController as? MainVC {
+                rootVC.useWidget = true
+                rootVC.bind(reactor: MainReactor())
+            }
+            
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
