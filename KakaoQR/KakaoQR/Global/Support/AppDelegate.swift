@@ -61,9 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-//        if let rootVC = window?.rootViewController as? MainVC {
-//            rootVC.takeAuthContext()
-//        }
+        if let rootVC = window?.rootViewController as? MainVC {
+            rootVC.takeAuthContext()
+        }
     }
 }
 

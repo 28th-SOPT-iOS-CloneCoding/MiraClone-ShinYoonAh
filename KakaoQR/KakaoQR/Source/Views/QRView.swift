@@ -24,7 +24,13 @@ class QRView: UIView {
         휴대전화번호 대신 개인안심번호를 기재하세요.
         """
         label.font = .systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .gray
+        label.textColor = UIColor(dynamicProvider: { traitCollection in
+            if traitCollection.userInterfaceStyle == .dark {
+                return .white
+            } else {
+                return .gray
+            }
+        })
         label.numberOfLines = 2
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,8 +49,20 @@ class QRView: UIView {
         let button = UIButton()
         button.setTitle("QR 체크인 쉐이크 기능 끄기", for: .normal)
         button.setImage(UIImage(systemName: "iphone"), for: .normal)
-        button.tintColor = .darkGray
-        button.setTitleColor(.gray, for: .normal)
+        button.setTitleColor(UIColor(dynamicProvider: { traitCollection in
+            if traitCollection.userInterfaceStyle == .dark {
+                return .white
+            } else {
+                return .gray
+            }
+        }), for: .normal)
+        button.tintColor = UIColor(dynamicProvider: { traitCollection in
+            if traitCollection.userInterfaceStyle == .dark {
+                return .white
+            } else {
+                return .gray
+            }
+        })
         button.titleLabel?.font = .systemFont(ofSize: 13, weight: .light)
         button.drawUnderline()
         button.imageEdgeInsets = .init(top: 0, left: -5, bottom: 0, right: 0)
