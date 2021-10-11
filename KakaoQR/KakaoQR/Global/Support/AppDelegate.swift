@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.view.backgroundColor = .systemBackground
         window.rootViewController = vc
         vc.takeAuthContext()
-        vc.useWidget = false
+        MainVC.useWidget = false
         vc.bind(reactor: MainReactor())
         self.window = window
         window.makeKeyAndVisible()
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             nextVC.bind(reactor: QRCodeReactor(root: nextVC))
             nextVC.modalPresentationStyle = .overFullScreen
             if var rootVC = window?.rootViewController as? MainVC {
-                rootVC.useWidget = true
+                MainVC.useWidget = true
                 rootVC.takeAuthContext()
                 rootVC.bind(reactor: MainReactor())
                 
@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
+        MainVC.useWidget = false
         if let currentVC = UIApplication.topViewController() as? QRCodeVC {
             currentVC.dismiss(animated: false, completion: nil)
         }

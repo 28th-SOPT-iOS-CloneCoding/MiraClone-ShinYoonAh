@@ -14,7 +14,7 @@ class MainVC: UIViewController, View {
     // MARK: - Properties
     var bag: DisposeBag = DisposeBag()
     var reactor: MainReactor!
-    var useWidget = false
+    static var useWidget = false
     var auth = false
     
     var qrButton: UIButton = {
@@ -78,20 +78,22 @@ class MainVC: UIViewController, View {
                          }
                     }
                 } else {
-                    if self.useWidget {
-                        DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            Observable.just("")
-                                .map { _ in Reactor.Action.shake(vc: self) }
-                                .bind(to: self.reactor.action)
-                                .disposed(by: self.bag)
-                        }
-                    }
+                    print("Successed")
                 }
             }
         }
     }
     
     func bindReactor() {
+        if MainVC.useWidget {
+            Observable.just("")
+                .map { _ in
+                    Reactor.Action.shake(vc: self)
+                }
+                .bind(to: reactor.action)
+                .disposed(by: bag)
+        }
+        
         // Action 바인딩
         qrButton.rx.tap
             .map { Reactor.Action.shake(vc: self) }
