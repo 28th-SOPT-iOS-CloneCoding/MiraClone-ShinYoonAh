@@ -20,6 +20,13 @@ class MainVC: UIViewController, View {
     var qrButton: UIButton = {
         let button = UIButton()
         button.setTitle("QR체크인", for: .normal)
+        button.setTitleColor(UIColor(dynamicProvider: { traitCollection in
+            if traitCollection.userInterfaceStyle == .dark {
+                return .white
+            } else {
+                return .black
+            }
+        }), for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.titleLabel?.font = .boldSystemFont(ofSize: 15)
         button.translatesAutoresizingMaskIntoConstraints = false

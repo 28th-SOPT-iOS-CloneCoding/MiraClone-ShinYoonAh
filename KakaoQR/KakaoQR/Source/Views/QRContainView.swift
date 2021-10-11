@@ -17,7 +17,6 @@ class QRContainView: UIView {
     }()
     var qrImage: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "1")
         image.constraint(image.widthAnchor, constant: 200)
         image.constraint(image.heightAnchor, constant: 200)
         image.contentMode = .scaleAspectFit
